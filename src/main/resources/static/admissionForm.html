@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shree Sangam Admissions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff0f5, #e6f2ff); /* Light page bg */
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 100px 60px 60px;
+      flex-wrap: wrap;
+    }
+
+    .left-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-section h1 {
+      font-size: 30px;
+      color: #1976d2; /* Blue heading */
+      margin-bottom: 10px;
+    }
+
+    .left-section h2 {
+      font-size: 22px;
+      color: #ec407a; /* Pink subheading */
+      margin-bottom: 30px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .info-box {
+      background: linear-gradient(90deg, #FFE3ED,#D1F4FA); /* SLIGHTLY darker gradient */
+      border-radius: 20px;
+      padding: 20px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: scale(1.05);
+    }
+
+    .info-box span {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+	.info-box p {
+	  font-size: 14px;
+	  font-weight: 700;
+	  color: #6482AD;
+	 
+	}
+
+
+
+    .right-section {
+      flex: 1;
+      min-width: 320px;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .right-section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    form input, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .flex-row input {
+      flex: 1;
+    }
+
+    button {
+      background: linear-gradient(to right, #42a5f5, #ec407a);
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #1e88e5, #d81b60);
+    }
+
+    @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+        padding: 70px 20px 40px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <h1>Shree Sangam Nursery & Kindergarten Admissions</h1>
+      <h2>Enquire Now</h2>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <span>1️⃣</span>
+          <p>Fill the school admission inquiry form on the website.</p>
+        </div>
+        <div class="info-box">
+          <span>2️⃣</span>
+          <p>We will invite you to the school.</p>
+        </div>
+        <div class="info-box">
+          <span>3️⃣</span>
+          <p>Visit the school for campus tour.</p>
+        </div>
+        <div class="info-box">
+          <span>4️⃣</span>
+          <p>Join Shree Sangam Family.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <h2>Admission Inquiry Form</h2>
+      <form action="/submitForm" method="post">
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="lastName" placeholder="Last Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" title="Enter 10-digit phone number" required />
+        <div class="flex-row">
+          <input type="text" name="city" placeholder="City" required />
+          <input type="text" name="pincode" placeholder="Pincode" required />
+        </div>
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
